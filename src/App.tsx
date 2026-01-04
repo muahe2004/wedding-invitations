@@ -1,4 +1,5 @@
 import './App.css'
+import Greeting from './components/Greeting'
 import Header from './components/Header'
 import Letter from './components/Letter'
 import Main from './components/Main'
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Main />
       <Letter/>
+      <Greeting/>
     </div>
   )
 }

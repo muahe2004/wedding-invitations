@@ -1,0 +1,60 @@
+.greeting {
+    padding: 60px 160px;
+    background: #f7f3ee;
+}
+
+.greeting-card {
+    width: 50%;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    padding: 32px;
+}
+
+.greeting-title {
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 28px;
+}
+
+.greeting-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.greeting-field {
+    display: flex;
+    flex-direction: column;
+    /* gap: 8px; */
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.greeting-field input,
+.greeting-field textarea {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 12px 14px;
+    font-size: 16px;
+    outline: none;
+}
+
+.greeting-field textarea {
+    resize: none;
+    min-height: 180px;
+}
+
+.greeting-submit {
+    align-self: center;
+    border: none;
+    background: #1f1f1f;
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.greeting-submit:hover {
+    opacity: 0.9;
+}
