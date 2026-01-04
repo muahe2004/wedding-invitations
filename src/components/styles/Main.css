@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+@import url("../../assets/theme.css");
 
 .hero {
   height: calc(100vh - 60px);
@@ -14,6 +15,17 @@
 
 .hero {
   position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.35)
+  );
+  z-index: 0;
 }
 
 .main-image {
@@ -31,16 +43,43 @@
   align-items: center;
   color: white;
   text-align: center;
+  z-index: 1;
 }
 
+.overlay > * {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fade-up 0.9s ease-out forwards;
+}
 
+.overlay > :nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.overlay > :nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+/* .overlay > :nth-child(3) {
+  animation-delay: 0.5s;
+} */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .script {
   font-family: 'Allura', cursive;
   font-size: 80px;
-  color: #f5d37a;
+  color: var(--primary-color);
 }
-
 
 .overlay h1 {
   font-family: 'Playfair Display', serif;

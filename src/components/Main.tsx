@@ -7,7 +7,7 @@ const Main = () => {
 
       <div className="overlay">
         <div className="script">Happy wedding</div>
-        <h1>Minh Đức &<br />Ngọc Linh</h1>
+        <h1>Văn Minh &<br />Ai Đó</h1>
         <p>14/07/2033 – Hưng Yên</p>
       </div>
     </section>

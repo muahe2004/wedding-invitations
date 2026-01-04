@@ -25,9 +25,9 @@ const Header = () => {
     <>
       <header className="wedding-header">
         <div className="header-box">
-          <span className="wedding-name">Đức</span>
+          <span className="wedding-name">Minh</span>
           <span className="wedding-name" aria-hidden="true"> & </span>
-          <span className="wedding-name">Linh</span>
+          <span className="wedding-name">Ai đó</span>
         </div>
 
         <div className="header-box">

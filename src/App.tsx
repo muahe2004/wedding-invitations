@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header'
+import Letter from './components/Letter'
 import Main from './components/Main'
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="page">
       <Header />
       <Main />
-      {/* <About/> */}
+      <Letter/>
     </div>
   )
 }
