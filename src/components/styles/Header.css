@@ -1,0 +1,93 @@
+@import url("../../assets/theme.css");
+
+.wedding-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  height: 60px;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* gap: 1.5rem; */
+  width: 100%;
+  /* padding: 2.5rem 2rem; */
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 24px 60px rgba(82, 64, 40, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 0 60px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-box__icon {
+    margin-left: auto;
+}
+
+.wedding-name {
+  font-family: "Playfair Display", "Cormorant Garamond", serif;
+  /* font-size: clamp(1.6rem, 3vw, 2.4rem); */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  /* color: #5a4632; */
+
+  color: var(--primary-color);
+}
+
+/* .wedding-name:first-of-type {
+  text-align: right;
+}
+
+.wedding-heart {
+  width: clamp(44px, 6vw, 64px);
+  height: clamp(44px, 6vw, 64px);
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #f6d5c8;
+  box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.8);
+} */
+
+/* .wedding-heart svg {
+  width: 60%;
+  height: 60%;
+  fill: #b2554a;
+  filter: drop-shadow(0 6px 12px rgba(178, 85, 74, 0.4));
+} */
+
+/* @media (max-width: 640px) {
+  .wedding-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .wedding-name:first-of-type {
+    text-align: center;
+  }
+} */
+
+
+
+.header-list {
+    display: flex;
+    list-style: none;
+    margin-left: 60px;
+}
+
+.header-list__item {
+    font-family: "Playfair Display", "Cormorant Garamond", serif;
+    margin-right: 30px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.header-icon {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+

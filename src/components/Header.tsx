@@ -1,15 +1,71 @@
-import { FaHeart } from 'react-icons/fa6'
+import { useRef, useState } from "react";
+import "./styles/Header.css";
 
 const Header = () => {
-  return (
-    <header className="wedding-header">
-      <span className="wedding-name">Ảnh ấy</span>
-      <span className="wedding-heart" aria-hidden="true">
-        <FaHeart />
-      </span>
-      <span className="wedding-name">Chỉ Ấy</span>
-    </header>
-  )
-}
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-export default Header
+  const [playing, setPlaying] = useState(false);
+
+  const toggleMusic = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (playing) {
+      audio.pause();
+    } else {
+      try {
+        await audio.play();
+      } catch {
+        // Autoplay may be blocked until user interaction.
+      }
+    }
+  };
+
+  return (
+    <>
+      <header className="wedding-header">
+        <div className="header-box">
+          <span className="wedding-name">Đức</span>
+          <span className="wedding-name" aria-hidden="true"> & </span>
+          <span className="wedding-name">Linh</span>
+        </div>
+
+        <div className="header-box">
+          <ul className="header-list">
+            <li className="header-list__item">Giới thiệu</li>
+            <li className="header-list__item">Ảnh cưới</li>
+            <li className="header-list__item">Địa điểm</li>
+            <li className="header-list__item">Mừng cưới</li>
+          </ul>
+        </div>
+
+        <div
+          className="header-box header-box__icon"
+          onClick={toggleMusic}
+        >
+          <img
+            className="header-icon"
+            src={
+              playing
+                ? "/icons/audio-on.svg"
+                : "/icons/audio-off.svg"
+            }
+            alt="music"
+          />
+        </div>
+      </header>
+
+      {/* Audio hidden */}
+      <audio
+        ref={audioRef}
+        loop
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+      >
+        <source src="/iDo.mp3" type="audio/mpeg" />
+      </audio>
+    </>
+  );
+};
+
+export default Header;
